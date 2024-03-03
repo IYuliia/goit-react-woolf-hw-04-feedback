@@ -42,11 +42,9 @@ const App = () => {
             neutral={feedback.neutral}
             bad={feedback.bad}
             total={totalFeedback}
-            positivePercentage={
-              totalFeedback === 0
-                ? 0
-                : Math.round((feedback.good / totalFeedback) * 100)
-            }
+            positivePercentage={Math.round(
+              (feedback.good / totalFeedback) * 100
+            )}
           />
         )}
       </Section>
